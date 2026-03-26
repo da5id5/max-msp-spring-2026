@@ -9,16 +9,17 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 96.0, 81.0, 900.0, 675.0 ],
+        "rect": [ 59.0, 81.0, 1000.0, 780.0 ],
         "boxes": [
             {
                 "box": {
-                    "id": "obj-31",
+                    "id": "obj-3",
+                    "linecount": 3,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 454.00001353025436, 522.1666820049286, 150.0, 20.0 ],
-                    "text": "jit.fpsgui"
+                    "patching_rect": [ 480.5, 257.5, 151.0, 47.0 ],
+                    "text": "adds message in front of input and adds arguement at end of message"
                 }
             },
             {
@@ -32,7 +33,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "", "" ],
-                    "patching_rect": [ 360.00001072883606, 514.6666820049286, 80.0, 35.0 ]
+                    "patching_rect": [ 52.333331525325775, 632.0, 80.0, 35.0 ]
                 }
             },
             {

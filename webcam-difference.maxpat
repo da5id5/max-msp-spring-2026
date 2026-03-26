@@ -9,8 +9,73 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 96.0, 81.0, 900.0, 675.0 ],
+        "rect": [ 45.0, 85.0, 1831.0, 1032.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-10",
+                    "maxclass": "jit.pwindow",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "jit_matrix", "" ],
+                    "patching_rect": [ 678.5, 377.0, 329.0, 299.5 ],
+                    "sync": 1
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-20",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 571.5, 319.0, 150.0, 20.0 ],
+                    "text": "trigger list list"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-29",
+                    "linecount": 4,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 531.0, 399.0, 98.0, 60.0 ],
+                    "text": "takes difference between current frame and previous frame"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-7",
+                    "maxclass": "newobj",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "jit_matrix", "" ],
+                    "patching_rect": [ 535.0, 365.0, 56.0, 22.0 ],
+                    "text": "jit.absdiff"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-5",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "patching_rect": [ 535.0, 319.0, 29.5, 22.0 ],
+                    "text": "t l l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-3",
+                    "linecount": 3,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 480.5, 257.5, 151.0, 47.0 ],
+                    "text": "adds message in front of input and adds arguement at end of message"
+                }
+            },
             {
                 "box": {
                     "id": "obj-31",
@@ -272,6 +337,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-1", 0 ],
+                    "order": 1,
                     "source": [ "obj-2", 0 ]
                 }
             },
@@ -279,6 +345,13 @@
                 "patchline": {
                     "destination": [ "obj-21", 0 ],
                     "source": [ "obj-2", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-5", 0 ],
+                    "order": 0,
+                    "source": [ "obj-2", 0 ]
                 }
             },
             {
@@ -321,8 +394,26 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-7", 0 ],
+                    "source": [ "obj-5", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-7", 1 ],
+                    "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-2", 0 ],
                     "source": [ "obj-6", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-10", 0 ],
+                    "source": [ "obj-7", 0 ]
                 }
             },
             {
